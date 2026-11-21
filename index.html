@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F1E8DE">
+<meta name="description" content="Точка старта · Для себя. Личная тетрадь, чтобы увидеть свой 2026 год и выбрать направление на 2027.">
+<title>Точка старта · Для себя | 2026–2027</title>
+<link rel="stylesheet" href="./fonts/fonts.css">
+<link rel="stylesheet" href="./style.css">
+<script src="./app.js" defer></script>
+</head>
+<body>
+<header class="top wrap">
+  <a class="brand" href="#home"><span aria-hidden="true">·</span> Точка старта</a>
+  <nav aria-label="Разделы сайта"><a href="#home" id="nav-home">Главная</a><a href="#chapter-0" id="nav-work">Тетрадь</a></nav>
+</header>
+<main class="wrap">
+  <section id="home" aria-labelledby="home-title">
+    <div class="hero">
+      <p class="eyebrow">Личная тетрадь · 2026–2027</p>
+      <h1 id="home-title">Точка старта<span aria-hidden="true"> ·</span><br><em>Для себя</em></h1>
+      <div class="hero-copy">
+        <p class="hero-lead">Пространство, чтобы услышать себя, увидеть свой год и выбрать направление, в котором хочется жить</p>
+        <p>Оглянись на 2026-й, заметь, что было важным, и выбери, чему хочешь дать больше места в 2027-м. Не обязательно заполнять всё за один раз.</p>
+      </div>
+      <a class="button primary" id="start" href="#first-question">Ответить на первый вопрос</a>
+      <p class="hero-hint" id="start-hint">Можно начать с пары минут и одного вопроса</p>
+      <a id="home-final" class="text-button" href="#final" hidden>Открыть финал</a>
+    </div>
+
+    <section class="first-question" id="first-question" aria-labelledby="first-title">
+      <div class="question-copy">
+        <h2 id="first-title" tabindex="-1">Каким был для тебя 2026 год по ощущениям?</h2>
+        <p id="first-description">Вспомни не только то, что произошло, но и то, как тебе жилось. Можно начать с одного слова или пары фраз.</p>
+      </div>
+      <div class="question-answer">
+        <details class="example"><summary>Посмотреть пример</summary><p>Год был насыщенным, но я часто уставала. Самыми тёплыми вспоминаются выходные, когда не нужно было никуда спешить.</p></details>
+        <textarea id="first-answer" rows="4" aria-labelledby="first-title" aria-describedby="first-description first-status" placeholder="Напиши здесь…"></textarea>
+        <div class="field-status"><p id="first-status" role="status"></p><button type="button" class="text-button retry" hidden>Повторить</button></div>
+        <div class="actions"><a class="button primary" href="#chapter-0">Продолжить</a><a class="button secondary" href="#chapter-0">Пропустить пока</a></div>
+      </div>
+    </section>
+
+    <section class="overview" id="sections" aria-labelledby="overview-title">
+      <div class="overview-heading">
+        <div><h2 id="overview-title" tabindex="-1">Все разделы тетради</h2><p>Можно идти по порядку или открыть раздел, который сейчас тебе ближе.</p></div>
+        <div class="progress home-progress">
+          <div class="progress-label"><span>Прогресс</span><strong data-progress-count></strong></div>
+          <div class="progress-track" data-progress role="progressbar" aria-label="Прогресс тетради" aria-valuemin="0" aria-valuemax="14"><div></div></div>
+        </div>
+      </div>
+      <div class="parts" id="parts"></div>
+      <p class="storage-note">Ответы сохраняются в этом браузере. Чтобы продолжить, открой тетрадь здесь же.</p>
+    </section>
+
+    <section class="editorial">
+      <div>
+        <h2>Для кого эта тетрадь</h2>
+        <p>Для тебя, если в повседневных делах сложно расслышать собственное «я хочу». Если тебе важно посмотреть на год не только через то, что ты успела, но и через то, как тебе жилось: что радовало, чего не хватало и на что были силы.</p>
+        <p>Эта тетрадь поможет выделить время на себя, собрать разрозненные желания и выбрать, с чего начать. Не нужно заранее знать, каким должен быть следующий год.</p>
+      </div>
+      <div>
+        <h2>Что ты получишь</h2>
+        <ul>
+          <li><strong>Свой взгляд на прошедший год:</strong> увидишь не только события и достижения, но и то, как ты себя чувствовала, что тебя поддерживало и что забирало силы.</li>
+          <li><strong>Понимание того, чего хочется дальше:</strong> соберёшь желания и выберешь то, чему сейчас действительно хочешь уделить внимание.</li>
+          <li><strong>Первый посильный шаг:</strong> решишь, что можно сделать в ближайшее время, вместо того чтобы планировать всё сразу.</li>
+          <li><strong>Ориентир на год:</strong> сможешь вернуться к своим ответам, заметить, что уже изменилось, и пересмотреть планы, если изменятся силы или обстоятельства.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="future" aria-labelledby="future-title">
+      <h2 id="future-title">Другие тетради серии</h2>
+      <div class="future-grid">
+        <article class="future-card blue">
+          <p class="eyebrow">В разработке</p><h3>Точка старта · Для двоих</h3>
+          <p>Тетрадь для разговора с партнёром: о том, чего хочется каждому, что вы хотите сделать вместе и как можете поддержать друг друга.</p>
+          <a class="button secondary" href="./for-two/">Узнать о тетради для двоих</a>
+        </article>
+        <article class="future-card">
+          <p class="eyebrow">В разработке</p><h3>Точка старта · Для семьи</h3>
+          <p>Когда станет яснее, чего хочется тебе, можно поговорить о том, чего вы хотите вместе. Мы готовим семейную тетрадь про общий отдых, поддержку и договорённости, в которых есть место желаниям каждого.</p>
+          <a class="button secondary" href="./for-family/">Узнать о семейной тетради</a>
+        </article>
+      </div>
+    </section>
+  </section>
+
+  <section id="workbook" hidden aria-label="Рабочая тетрадь">
+    <div class="work-layout">
+      <aside class="sidebar">
+        <div class="progress">
+          <div class="progress-label"><span>Прогресс <span class="completion-star" aria-hidden="true">·</span></span><strong data-progress-count></strong></div>
+          <div class="progress-track" data-progress role="progressbar" aria-label="Прогресс тетради" aria-valuemin="0" aria-valuemax="14"><div></div></div>
+          <p id="progress-status" class="sr-only" aria-live="polite"></p>
+        </div>
+        <label class="chapter-picker">Перейти к разделу <select id="chapters-mobile"></select></label>
+        <nav id="chapters" aria-label="Разделы тетради"></nav>
+        <button class="button secondary sidebar-pdf" type="button" data-download>Скачать PDF</button>
+      </aside>
+      <article id="exercise"></article>
+    </div>
+  </section>
+
+  <section id="final" hidden aria-labelledby="final-title">
+    <div class="final-stage">
+      <span class="final-mark" aria-hidden="true">·</span>
+      <div class="final-message">
+        <h1 id="final-title" tabindex="-1">Ты выбрал(а) направление.</h1>
+        <p>Ты подвёл(а) итоги. Ты увидел(а) путь.</p>
+        <p>Сделай глубокий вдох. Поблагодари себя.<br>Ты готов(а) идти дальше.</p>
+      </div>
+      <div class="final-actions">
+        <button type="button" class="button primary" data-download>Скачать PDF</button>
+        <a class="button secondary" href="#chapter-13">Вернуться к тетради</a>
+      </div>
+    </div>
+  </section>
+  <p id="download-status" role="status" hidden></p>
+</main>
+<footer class="wrap footer"><a class="brand" href="#home"><span aria-hidden="true">·</span> Точка старта</a><span>Личная тетрадь · 2026–2027</span></footer>
+</body>
+</html>
